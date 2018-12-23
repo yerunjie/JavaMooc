@@ -3,6 +3,7 @@ package com.ecnu.xml;
 import lombok.Data;
 import lombok.ToString;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 
 /**
@@ -10,13 +11,19 @@ import java.math.BigDecimal;
  *
  * @author yerunjie
  */
+@XmlRootElement(name = "book")
+@XmlAccessorType(XmlAccessType.FIELD)
 @Data
 @ToString
 public class Book {
+    @XmlAttribute
     private String category;
+    @XmlElement
     private String title;
-    private String lang;
+    @XmlElement
     private String author;
+    @XmlElement
     private String year;
+    @XmlElement
     private BigDecimal price;
 }
