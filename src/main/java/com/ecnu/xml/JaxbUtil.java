@@ -59,7 +59,7 @@ public class JaxbUtil {
         book.setYear("2018");
         book.setAuthor("陈良育");
         book.setPrice(new BigDecimal("123.45"));
-        convertToXml(newBookStore,null);
+        convertToXml(newBookStore, null);
 
     }
 }
