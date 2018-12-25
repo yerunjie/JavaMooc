@@ -1,5 +1,6 @@
 package com.ecnu.guava;
 
+import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.io.ByteStreams;
@@ -37,5 +38,7 @@ public class GuavaMain {
             String s = new String(bytes);
             System.out.println(s);
         }
+        Preconditions.checkArgument(1 == 1);
+        Preconditions.checkArgument(1 == 2);
     }
 }
