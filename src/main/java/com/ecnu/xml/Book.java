@@ -16,6 +16,8 @@ import java.math.BigDecimal;
 @Data
 @ToString
 public class Book {
+
+    private int id;
     @XmlAttribute
     private String category;
     @XmlElement

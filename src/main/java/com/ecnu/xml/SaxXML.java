@@ -22,9 +22,9 @@ public class SaxXML {
             SaxHandler handler = new SaxHandler("book");
             parser.parse(new FileInputStream(file), handler);
 
-            List<Book> peopleList = handler.getBooks();
-            for (Book people : peopleList) {
-                System.out.println(people);
+            List<Book> books = handler.getBooks();
+            for (Book book : books) {
+                System.out.println(book);
             }
         } catch (Exception e) {
             // TODO Auto-generated catch block
