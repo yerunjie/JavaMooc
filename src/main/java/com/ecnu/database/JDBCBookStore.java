@@ -11,10 +11,11 @@ import java.util.List;
  *
  * @author yerunjie
  */
-public abstract class DataBaseBookStore {
+public abstract class JDBCBookStore implements IBookStore {
 
     abstract Connection getConnection() throws SQLException;
 
+    @Override
     public List<Book> getBooks() {
         try {
             List<Book> books = new ArrayList<>();
@@ -33,6 +34,7 @@ public abstract class DataBaseBookStore {
         }
     }
 
+    @Override
     public void addBooks(List<Book> books) {
         try (Connection connection = getConnection()) {
             connection.setAutoCommit(false);
@@ -56,6 +58,7 @@ public abstract class DataBaseBookStore {
         }
     }
 
+    @Override
     public boolean addBook(Book book) {
         try {
             Connection connection = getConnection();
@@ -73,7 +76,7 @@ public abstract class DataBaseBookStore {
         }
     }
 
-    public static Book getBook(ResultSet resultSet) {
+    private static Book getBook(ResultSet resultSet) {
         Book book = new Book();
         try {
             book.setId(resultSet.getInt("id"));

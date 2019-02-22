@@ -1,5 +1,6 @@
 package com.ecnu.database;
 
+import com.ecnu.database.mybatis.MyBatisBookStore;
 import com.ecnu.xml.Book;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class DatabaseMain {
         long start = System.currentTimeMillis();
         for (int i = 0; i < 1000; i++) {
             System.out.println(i);
-            DataBaseBookStore bookStore = new C3P0BookStore();
+            IBookStore bookStore = new MyBatisBookStore();
             List<Book> books = bookStore.getBooks();
             System.out.println(books);
         }

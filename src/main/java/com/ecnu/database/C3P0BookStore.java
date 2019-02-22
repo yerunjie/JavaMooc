@@ -10,7 +10,7 @@ import java.sql.SQLException;
  *
  * @author yerunjie
  */
-public class C3P0BookStore extends DataBaseBookStore {
+public class C3P0BookStore extends JDBCBookStore {
 
     private static ComboPooledDataSource dataSource = new ComboPooledDataSource(); // 空参数表示默认配置
 

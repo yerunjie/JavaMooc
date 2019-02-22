@@ -9,7 +9,7 @@ import java.sql.SQLException;
  *
  * @author yerunjie
  */
-public class CommonBookStore extends DataBaseBookStore {
+public class CommonBookStore extends JDBCBookStore {
 
     private static final String URL = "jdbc:mysql://localhost:3306/test";
     private static final String USER = "root";
