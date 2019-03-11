@@ -1,8 +1,6 @@
 package com.ecnu.admission.service;
 
-import org.apache.poi.ss.usermodel.Workbook;
-
-import javax.mail.internet.MimeMessage;
+import com.ecnu.admission.AdmissionTicket;
 
 /**
  * Created by yerunjie on 2019-03-08
@@ -11,7 +9,5 @@ import javax.mail.internet.MimeMessage;
  */
 public interface AdmissionService {
 
-    int importFromExcel(Workbook workbook);
-
-    int sendMail(MimeMessage mimeMessage);
+    byte[] getPDF(AdmissionTicket admissionTicket);
 }

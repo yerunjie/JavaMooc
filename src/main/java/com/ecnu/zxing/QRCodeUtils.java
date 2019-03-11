@@ -24,8 +24,8 @@ public class QRCodeUtils {
     /*
      * 定义二维码的宽高
      */
-    private static int WIDTH = 300;
-    private static int HEIGHT = 300;
+    private static int WIDTH = 150;
+    private static int HEIGHT = 150;
     private static String FORMAT = "png";//二维码格式
 
     //生成二维码
