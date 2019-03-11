@@ -9,6 +9,7 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.HashMap;
@@ -43,6 +44,27 @@ public class QRCodeUtils {
 
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+    }
+
+    //生成二维码
+    public static byte[] createZxingqrCode(String content) {
+        //定义二维码参数
+        Map<EncodeHintType, Object> hints = new HashMap<>();
+
+        hints.put(EncodeHintType.CHARACTER_SET, "utf-8");//设置编码
+        hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.M);//设置容错等级
+        hints.put(EncodeHintType.MARGIN, 2);//设置边距默认是5
+
+        try (ByteArrayOutputStream os = new ByteArrayOutputStream()) {
+            BitMatrix bitMatrix = new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, WIDTH, HEIGHT, hints);
+
+            MatrixToImageWriter.writeToStream(bitMatrix, FORMAT, os);//写到指定路径下
+            return os.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
 
     }
