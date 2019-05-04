@@ -1,3 +1,4 @@
+/*
 package com.ecnu.admission.service.impl;
 
 import com.aspose.words.*;
@@ -14,11 +15,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+*/
 /**
  * Created by yerunjie on 2019-03-11
  *
  * @author yerunjie
- */
+ *//*
+
 public class AsposeDocxTemplateImpl implements AdmissionService {
     @Override
     public byte[] getPDF(AdmissionTicket admissionTicket) {
@@ -69,3 +72,4 @@ public class AsposeDocxTemplateImpl implements AdmissionService {
         }
     }
 }
+*/

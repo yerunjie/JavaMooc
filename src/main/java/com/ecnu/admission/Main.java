@@ -3,7 +3,6 @@ package com.ecnu.admission;
 import com.ecnu.admission.persistence.AdmissionRepositoryFactory;
 import com.ecnu.admission.persistence.IAdmissionRepository;
 import com.ecnu.admission.service.AdmissionService;
-import com.ecnu.admission.service.impl.AsposeDocxTemplateImpl;
 import com.ecnu.admission.service.impl.POIDocxImpl;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -51,7 +50,7 @@ public class Main {
         transport.connect("1102266271@qq.com", "iwtcyqtoyijlfghi");
 
         repository = AdmissionRepositoryFactory.getRepository();
-        admissionService = new AsposeDocxTemplateImpl();
+        //admissionService = new AsposeDocxTemplateImpl();
     }
 
     public void close() throws Exception {

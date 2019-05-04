@@ -1,3 +1,4 @@
+/*
 package com.ecnu.docx;
 
 import com.aspose.words.*;
@@ -67,3 +68,4 @@ class ReplaceImage implements IReplacingCallback {
         return ReplaceAction.REPLACE;
     }
 }
+*/
